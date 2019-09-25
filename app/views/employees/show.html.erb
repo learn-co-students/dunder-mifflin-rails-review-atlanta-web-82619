@@ -1,0 +1,14 @@
+<h1>About <%= @employee.full_name %></h1>
+
+<%= link_to "Back to All Employees", employees_path %><br><br>
+
+<img src="<%= @employee.img_url %>" height=300px>
+<br>
+Name: <%= @employee.full_name %><br>
+Alias: <%= @employee.alias %><br>
+Title: <%= @employee.title %><br>
+Office: <%= @employee.office %><br>
+
+<br>
+<%= link_to "Edit this Employee", edit_employee_path(@employee) %><br>
+<%= link_to "Delete This Employee", employee_path(@employee), :data => {:confirm => "Are you sure?", :method => "delete"} %>
