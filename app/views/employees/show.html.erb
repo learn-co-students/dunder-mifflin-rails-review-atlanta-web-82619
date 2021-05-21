@@ -1,0 +1,10 @@
+<h1><%= @employee.first_name %> <%= @employee.last_name %></h1>
+<% if @employee.img_url %>
+  <%= image_tag  @employee.img_url %>
+<% end %>
+<p>Alias: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<p>Dog: <%= @employee.dog.name %></p>
+
+<%= link_to 'Delete', employee_path(@employee), method: :delete %> 
